@@ -1,0 +1,38 @@
+body{
+    
+    
+    align-items: center;
+
+    padding: 70vh 30px 30px 30px;
+    position: absolute;
+    background-color: aliceblue;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-items: center;
+    font-size: 34px;
+    color: blue;
+}
+.button{
+
+    margin-top: 10px;
+    background-color: rgb(76, 76, 175);
+    color: #fff;
+    font-size: 23px;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.guess{
+    font-size: 20px;
+    margin-top: 4vh;
+    width: 50%;
+    height: 3vh;
+    font-weight: 600;
+}

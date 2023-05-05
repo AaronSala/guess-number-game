@@ -7,7 +7,6 @@ const range = document.querySelector(".range")
  const number=document.querySelector(".previousguess")
 
 btn.addEventListener("click", clicked)
-console.log(guessNumber)
 
 let guessCount =1;
 let resetButton;
@@ -36,13 +35,13 @@ function clicked(){
     }
     
     else if(guess.value<guessNumber){
-        answer.innerHTML="wrong" 
+        answer.innerHTML="wrong!!!" 
         answer.style.background="red"
         range.innerHTML="you have guessed too low"
        
     }
     else {
-        answer.innerHTML="wrong" 
+        answer.innerHTML="wrong!!!" 
         answer.style.background="red"
         range.innerHTML="you have guessed too high" 
     }
