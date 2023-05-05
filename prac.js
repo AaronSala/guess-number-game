@@ -9,16 +9,16 @@ const range = document.querySelector(".range")
 btn.addEventListener("click", clicked)
 console.log(guessNumber)
 
-let guesCount =1;
+let guessCount =1;
 let resetButton;
-function clicked(guessCount){
+function clicked(){
    const userGuess = Number(guess.value)
    
    if (guessCount ===1){
     number.textContent = 'Previous guesses: ';
-    number.innerHTML= "you guessed "+  guess.value
+   // number.innerHTML= "you guessed "+  guess.value
    }
-   number.innerHTML += `${userGuess}`;
+   number.innerHTML += `${ userGuess +" "}`;
     //number.innerHTML= "you guessed "+  guess.value
     
     if(guess.value ==guessNumber){
@@ -26,11 +26,13 @@ function clicked(guessCount){
         answer.innerHTML="correct you won";
         range.innerHTML="";
        setGameOver();
+      
     }
     else if(guessCount === 10){
         answer.innerHTML="!!!Game Over!!!" 
         range.innerHTML="";
         setGameOver();
+       
     }
     
     else if(guess.value<guessNumber){
@@ -45,7 +47,7 @@ function clicked(guessCount){
         range.innerHTML="you have guessed too high" 
     }
    
-   guesCount++;
+   guessCount++;
    guess.value='';
    guess.focus();
     console.log(guess.value)
@@ -60,11 +62,11 @@ function setGameOver() {
     resetButton.addEventListener('click', resetGame);
   }
   function resetGame() {
-    guesCount = 1;
+    guessCount = 1;
   
-    const resetParas = document.querySelectorAll('.working p');
-    for (const resetPara of resetParas) {
-      working.textContent = '';
+    const resetsAll = document.querySelectorAll('.working p');
+    for (const resetAll of resetsAll) {
+      resetAll.textContent = '';
     }
   
     resetButton.parentNode.removeChild(resetButton);
